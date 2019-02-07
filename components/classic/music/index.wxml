@@ -1,0 +1,6 @@
+<view>
+	<image class="" src="{{img}}" mode="scaleToFill" />
+	<image class="" src="{{playSrc}}" mode="scaleToFill" />
+	<image class="" src="images/music@tag.png" mode="scaleToFill" />
+	<text>{{content}}</text>
+</view>
