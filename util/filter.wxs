@@ -1,0 +1,17 @@
+var format = function(text) {
+    //正则表达式替换
+    if (!text) {
+        return
+    }
+    var reg = getRegExp('\\\\n', 'g')
+    return text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+}
+
+var limit= function(array, length){
+	return array.slice(0, length)
+	//截取前length条数据
+}
+module.exports = {
+    format: format
+    limit: limit
+}

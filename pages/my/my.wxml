@@ -1,0 +1,37 @@
+<view class="container">
+    <image class="bg" src="/images/my/my@bg.png">
+    </image>
+    <!-- <open-data type="userAvatarUrl" class="avatar avatar-position"></open-data> -->
+    <!-- 快捷显示用户信息 -->
+    <v-button bind:getuserinfo="onGetUserInfo" class="avatar-position" open-type="getUserInfo" wx:if="{{!authorized}}">
+        <!-- 命名规则 属性-链接  open-type -->
+        <image class="avatar" slot="img" src="/images/my/my.png">
+        </image>
+    </v-button>
+    <view class="avatar-container avatar-position" wx:if="{{authorized}}">
+        <image class="avatar" mode="scaleToFill" src="{{userInfo.avatarUrl}}">
+        </image>
+        <text>{{userInfo.nickName}}</text>
+    </view>
+    <view class="about-container">
+        <view bind:tap="onJumpToAbout" class="about-us">
+            <image class="" mode="scaleToFill" src="/images/my/about.png">
+            </image>
+            <text class="description">关于我们</text>
+        </view>
+        <view class="about-us">
+            <text class="book-num">{{bookCount}}</text>
+            <text class="description">喜欢的书</text>
+        </view>
+    </view>
+    <view class="like-container">
+        <image class="headline" src="/images/my/like.png"></image>
+        <view class="preview-container">
+            <block wx:for="{{classics}}" wx:key="">
+                <v-preview class="preview" classic="{{item}}" />
+            </block>
+        </view>
+    </view>
+    <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button> -->
+</view>
+<image bind:tap="onStudy" class="study" src="/images/my/study.png"></image>

@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.5.2",
 	"appid": "wxa45868f0cd036de7",
-	"projectname": "blink",
+	"projectname": "Test",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -28,13 +28,38 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "book-detail",
+					"pathName": "pages/book-detail/book-detail",
+					"query": "bid=1308",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "book",
+					"pathName": "pages/book/book",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"scene": null
+				}
+			]
 		}
 	}
 }
